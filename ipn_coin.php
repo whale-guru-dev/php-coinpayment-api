@@ -8,9 +8,9 @@ $tot = $db->query("INSERT INTO logs SET log='".print_r($_POST,true)."', date='".
 
 
     // Fill these in with the information from your CoinPayments.net account.
-    $cp_merchant_id = '620abba5e1fb8cd7b21039dfa2078fa9';
-    $cp_ipn_secret = '~thomas.d~';
-    $cp_debug_email = 'masterionic@gmail.com';
+    $cp_merchant_id = '';
+    $cp_ipn_secret = '';
+    $cp_debug_email = '';
 
 
     function errorAndDie($error_msg) {
