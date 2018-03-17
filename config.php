@@ -1,8 +1,8 @@
 <?php
-$dbname = "thomasd_test";
-$dbhost = "localhost";
-$dbuser = "thomasd_root";
-$dbpass = "yntDW*gkoTRs";
+$dbname = "";
+$dbhost = "";
+$dbuser = "";
+$dbpass = "";
 
 
 try{
