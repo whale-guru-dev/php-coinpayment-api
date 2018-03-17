@@ -15,7 +15,7 @@ if(empty($tot)){
 if(empty($tot['eth'])) {
 
 
-    $result = $cps->GetCallbackAddress('eth','http://ns1-216-198.superdnsserver.net/ipn_coin.php');
+    $result = $cps->GetCallbackAddress('eth','http://www.test.com/ipn_coin.php');
     if ($result['error'] == 'ok') {
         $le = php_sapi_name() == 'cli' ? "\n" : '<br />';
         //print 'Address: ' . $result['result']['address'] . $le;
@@ -31,7 +31,7 @@ if(empty($tot['eth'])) {
 if(empty($tot['ltct'])) {
 
 
-    $result = $cps->GetCallbackAddress('ltct','http://ns1-216-198.superdnsserver.net/ipn_coin.php');
+    $result = $cps->GetCallbackAddress('ltct','http://www.test.com/ipn_coin.php');
     if ($result['error'] == 'ok') {
         $le = php_sapi_name() == 'cli' ? "\n" : '<br />';
         //print 'Address: ' . $result['result']['address'] . $le;
