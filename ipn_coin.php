@@ -72,7 +72,7 @@ if($_POST['ipn_type']=="deposit"){
 
 	
 	$detalii= $db->query("SELECT x.".strtolower($currency1)." as usereth, x.id, b.who, b.".strtolower($currency1)." FROM user as x INNER JOIN address as b ON x.id=b.who WHERE b.".strtolower($currency1)."='".$address."' ",PDO::FETCH_ASSOC)->fetch();
-mail('masterionic@gmail.com','deposit',$detalii['id']);
+mail('','deposit',$detalii['id']);
 	$checa= $db->query("SELECT trxid FROM crypto WHERE trxid='".$txn_id."' ",PDO::FETCH_ASSOC)->fetch();
 	$totxa = $db->query("INSERT INTO logs SET log='".print_r($detalii,true)."', date='".date("Y-m-d H:i:s")."' ")->fetch();
 
@@ -126,7 +126,7 @@ $resxa = $db->query("INSERT INTO logs SET log='Tranzactie Deposit Crypto FINISH'
 	//$curr=strtolower($currency1);
 	$ct= $detalii[strtolower($currency1)];
 	$ctn = $ct-$amount;
-	mail('masterionic@gmail.com','withdrawal',$ctn);
+	mail('','withdrawal',$ctn);
         $db->query("UPDATE user SET ".strtolower($currency1)."='".$ctn."' WHERE id='".$detalii['id']."'");
 
         $trx = $txn_id;
